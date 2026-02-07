@@ -10,6 +10,26 @@
 
   <!-- PDF Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <style>
+    /* Footer styling (safe even if CSS file fails) */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 8px 0;
+      font-size: 14px;
+      z-index: 1000;
+    }
+
+    body {
+      padding-bottom: 40px; /* prevents footer overlap */
+    }
+  </style>
 </head>
 
 <body>
@@ -39,6 +59,11 @@
 
   <p class="warning">⚠ Computer is side subject, we do not count it!</p>
 </div>
+
+<!-- Footer -->
+<footer>
+  Made by Haiyansh
+</footer>
 
 <!-- JavaScript -->
 <script src="assets/js/script.js"></script>
