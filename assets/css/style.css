@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  transition: 0.4s;
+}
+
+/* LIGHT MODE */
+body.light {
+  background: #f4f6f8;
+  color: #000;
+}
+
+/* MAIN CARD */
+.app {
+  width: 380px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  padding: 25px;
+  border-radius: 22px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  animation: pop 0.8s ease;
+}
+
+/* ANIMATION */
+@keyframes pop {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* FORM ELEMENTS */
+select,
+input,
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+}
+
+/* INPUT */
+input {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* SELECT */
+select {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* BUTTON */
+button {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* RESULT BOX (MARKSHEET LOOK) */
+.result {
+  margin-top: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 15px;
+  border-radius: 14px;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* HELPER NOTE */
+.note {
+  text-align: center;
+  font-size: 13px;
+  color: #ffd966;
+  margin-bottom: 5px;
+}
+
+/* SMALL TEXT */
+small {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #ffb3b3;
+}
+
+/* WARNING TEXT */
+.warning {
+  color: #ff4d4d;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* THEME TOGGLE BUTTON */
+.theme-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 420px) {
+  .app {
+    width: 95%;
+  }
+}
