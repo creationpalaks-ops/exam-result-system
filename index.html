@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Result System</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- PDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+<div class="app">
+  <h1>🎓 Exam Result System</h1>
+
+  <select id="exam" onchange="loadExam()">
+    <option value="">Select Exam Type</option>
+    <option value="weekly">Weekly</option>
+    <option value="first">First Term</option>
+    <option value="second">Second Term</option>
+    <option value="annual">Annual Term</option>
+  </select>
+
+  <div id="form"></div>
+
+  <div id="result" class="result"></div>
+
+  <div class="actions">
+    <button onclick="downloadPDF()">🧾 PDF</button>
+    <button onclick="printResult()">🖨 Print</button>
+    <button onclick="shareResult()">📤 Share</button>
+  </div>
+
+  <p class="warning">⚠ Computer is side subject, we do not count it!</p>
+</div>
+
+<!-- JavaScript -->
+<script src="assets/js/script.js"></script>
+</body>
+</html>
